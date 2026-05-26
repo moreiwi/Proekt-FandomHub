@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FandomHub – Главная</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="site-logo">
+    <a href="index.html">FandomHub</a>
+    </h1>
+    <nav>
+      <a href="index.html" class="active">Главная</a>
+      <a href="catalog.html">Каталог</a>
+    </nav>
+  </header>
+
+  <main>
+   <section class="hero">
+
+    <div class="hero-slider">
+    <img class="hero-slide active" src="assets/images/home-banner1.png" alt="Баннер 1">
+    <img class="hero-slide" src="assets/images/home-banner2.png" alt="Баннер 2">
+    <img class="hero-slide" src="assets/images/home-banner3.png" alt="Баннер 3">
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="hero-subtitle">
+             Каталог медиафраншиз
+        </p>
+
+        <h1>FandomHub</h1>
+
+        <p class="hero-description">
+            Исследуйте культовые вселенные, открывайте новые миры
+            и погружайтесь в атмосферу аниме, хоррора,
+            фантастики и постапокалипсиса.
+        </p>
+
+        <a href="catalog.html" class="hero-button">
+            Перейти в каталог
+        </a>
+
+    </div>
+
+</section>
+  </main>
+
+
+
+</body>
+<script>
+const slides = document.querySelectorAll('.hero-slide');
+let currentSlide = 0;
+
+setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+
+    currentSlide = (currentSlide + 1) % slides.length;
+
+    slides[currentSlide].classList.add('active');
+}, 5000);
+</script>
+</html>

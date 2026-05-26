@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FandomHub – Каталог</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/catalog.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1><a href="index.html">FandomHub</a></h1>
+
+    <nav>
+      <a href="index.html">Главная</a> |
+      <a href="catalog.html" class="active">Каталог</a>
+    </nav>
+  </header>
+
+  <main class="catalog-page">
+
+    <section class="controls">
+
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Поиск по названию..."
+      >
+
+      <div id="filter-buttons" class="filters"></div>
+
+      <select id="genre-select">
+        <option value="all">Все жанры</option>
+      </select>
+
+      <select id="sort-select">
+        <option value="default">Сортировка</option>
+        <option value="name-asc">По названию А-Я</option>
+        <option value="name-desc">По названию Я-А</option>
+        <option value="category">По категории</option>
+        <option value="genre">По жанру</option>
+      </select>
+
+    </section>
+
+    <div id="catalog-grid" class="card-grid">
+      <!-- Карточки будут добавлены через JS -->
+    </div>
+
+    <p id="no-results" class="hidden">Ничего не найдено</p>
+
+  </main>
+
+  <div id="detail-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Закрыть">&times;</button>
+
+      <img id="modal-img" src="" alt="">
+
+      <h2 id="modal-title"></h2>
+
+      <p class="modal-meta">
+        <span id="modal-category"></span>
+        <span>•</span>
+        <span id="modal-genre"></span>
+      </p>
+
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
